@@ -1,0 +1,33 @@
+.adminclublist {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    text-align: center;
+    align-items: center;
+    margin-top:30px;
+  }
+
+  .adminclublist div{
+    background-color: rgb(227, 239, 243);
+    padding: 5px;
+    border-radius:20px;
+  }
+  
+  .logoclub{
+    border-radius:10%;
+    width: 200px;
+    height: 200px;
+  }
+
+  .infos{
+    font-weight: 400;
+    font-size:15px;
+    text-align: center;
+  }
+  .infoslist{
+    display: flex;
+    text-align: center;
+  }
+  .infoslist h4{
+    margin-left:5px;
+  }

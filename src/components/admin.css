@@ -1,0 +1,22 @@
+.addevent{
+    width:100%;
+    display: block;
+    
+    
+    justify-items: center;
+    padding-bottom:20px;
+}
+
+.addevent form{
+width:45%;
+
+
+}
+
+
+
+.addevent h4{
+    font-family: "montserrat";
+    margin-bottom:20px;
+}
+

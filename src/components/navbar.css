@@ -1,0 +1,148 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.nav {
+  width: 100%;
+  height: 75px;
+  background-color: #51afd9;
+  border-bottom: solid 1px #cfcfcf;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  padding: 0px 38px;
+}
+
+.presentation {
+  display: flex;
+  align-items: center;
+}
+
+.nav img {
+  width: 70px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.titles {
+  font-family: "barlow", sans-serif;
+  margin-left: 8px;
+  color: #1d4355;
+  transition: color 0.6s ease-in-out;
+}
+
+.titles h4 {
+  
+  font-weight: 550;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.titles:hover {
+  color: white;
+}
+
+.navbar {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  padding-right:30px;
+}
+
+.navbarlist {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+.navbarlist li {
+  cursor: pointer;
+  color: #1d4355;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  transition: color 0.6s ease-in-out;
+}
+
+.navbarlist li:hover {
+  color: white;
+}
+
+.menu__link {
+  font-family: "barlow", sans-serif;
+  margin-left: 8px;
+  color: #1d4355;
+  position: relative;
+}
+
+.menu__link::before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s, opacity 0.4s;
+  opacity: 0;
+}
+
+.menu__link:hover::before {
+  transform: scaleX(1);
+  opacity: 1;
+}
+
+
+.mobile-menu-icon {
+  display: none;
+  font-size: 2rem;
+  color: #1d4355;
+  cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+  .nav{
+    padding: 0px 10px;
+  }
+  .navbarlist {
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    position: fixed;
+    top: 75px;
+    right: 0;
+    background-color: #51afd9;
+    width: 100%;
+    height:auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-items: center;
+   
+  }
+.titles h4{
+  font-size: 12px;
+}
+.navbar{
+  padding-right:5px;
+  padding-right:5px;
+}
+.titles{
+  margin-left: 0;
+}
+  .navbarlist.open {
+    display: flex;
+  }
+
+  .mobile-menu-icon {
+    display: block;
+    margin-left: auto;
+  }
+}

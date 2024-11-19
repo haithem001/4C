@@ -1,0 +1,16 @@
+.swiper{
+    height:400px;
+    width:95%;
+    margin-top:40px;
+}
+
+
+.imgswip{
+    box-shadow: 5px 5px 5px 5px #d6e9f1;
+    border-radius: 3px;
+    width:100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom:49vh;
+}

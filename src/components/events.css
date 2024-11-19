@@ -1,0 +1,71 @@
+.events-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin-top: 35px;
+}
+
+.scroll-button {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  padding: 8px;
+}
+
+.scroll-button.left {
+  left: 10px;
+}
+
+.scroll-button.right {
+  right: 10px;
+}
+
+.eventslist {
+  display: flex;
+  gap: 20px;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 40px 0;
+}
+
+.eventslist::-webkit-scrollbar {
+  display: none;
+}
+
+.eventslist {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.eventslist > div {
+  flex: 0 0 230px;
+}
+
+
+
+
+@media (min-width: 1024px) {
+  .eventslist > div {
+    flex: 0 0 30%;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  .eventslist > div {
+    flex: 0 0 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .eventslist > div {
+    flex: 0 0 90%;
+  }
+}
