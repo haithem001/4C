@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
-import Home from "./pages/home.jsx";
 import { createBrowserRouter, RouterProvider} from "react-router-dom";
 import Login from "./pages/login.jsx";
 import axios from "axios";
 import MuiDrawer from "./MuiComponenets/MuiDrawer.jsx";
 import NotFound from "./pages/NotFound.jsx";
 import { getCookie } from "./api.js";
+import App from "./App";
 
 const verifyUser = async () => {
   const token = getCookie("token");
@@ -34,7 +34,7 @@ const AppRouter = () => {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Home />,
+      element: <App/>,
     },
     {
       path: "/admin/login",
