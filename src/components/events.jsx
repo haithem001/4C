@@ -29,7 +29,7 @@ const Events = ({ events, check }) => {
   };
 
   return (
-    <div className="events-container">
+    <div className="events-container" id="events">
       <IconButton
         onClick={() => scrollByOneEvent("left")}
         className="scroll-button left"

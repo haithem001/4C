@@ -14,7 +14,7 @@ const Partenaires = ({parts}) => {
     }
   };
   return (
-    <div className="parts-container">
+    <div className="parts-container" id="parts">
       <IconButton onClick={() => scrollByOne("left")} className="scroll-button left">
         <ArrowBackIosIcon />
       </IconButton>

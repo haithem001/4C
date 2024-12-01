@@ -7,6 +7,7 @@ import Main from "./components/Main";
 import Events from "./components/events";
 import Clubs from "./components/clubs";
 import Partenaires from "./components/partenaires";
+import Footer from "./components/footer";
 
 
 function App() {
@@ -27,9 +28,9 @@ function App() {
 
   const scrollEvent = e => {
     console.log(e.target.scrollTop);
-    if(e.target.scrollTop > 850) {
-      document.getElementById("header").style.backgroundColor="#CB997E";
-      document.getElementById("header").style.opacity=".75";
+    if(e.target.scrollTop > 1000) {
+      document.getElementById("main").style.backgroundColor="#CB997E";
+      document.getElementById("main").style.opacity=".75";
       if(e.target.scrollTop > 3000) {
         document.getElementById("navportfolio").style.color="#F0EFEB";
         document.getElementById("navabout").style.color="#F0EFEB";
@@ -42,16 +43,11 @@ function App() {
         document.getElementById("navhome").style.color="#F0EFEB";
         document.getElementById("navcontact").style.color="#F0EFEB";
       }
-      else if(e.target.scrollTop > 880) {
-        document.getElementById("navportfolio").style.color="#F0EFEB";
-        document.getElementById("navabout").style.color="black";
-        document.getElementById("navhome").style.color="#F0EFEB";
-        document.getElementById("navcontact").style.color="#F0EFEB";
-      }  else {
-        document.getElementById("navhome").style.color="#F0EFEB";
+        else {
+        document.getElementById("main").style.color="#F0EFEB";
       }
     } else {
-      document.getElementById("header").style.backgroundColor="transparent";
+      document.getElementById("Header").style.backgroundColor="transparent";
     }
     // const scrollEvent = $ => {
     // !(function($) {
@@ -91,6 +87,7 @@ function App() {
         <Events events={event}/>
         <Clubs clubs={clubs}/>
         <Partenaires parts={parts}/>
+        <Footer/>
       </div>
   );
 

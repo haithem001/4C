@@ -29,7 +29,7 @@ import React, { useEffect, useState } from "react";
 
 
 const Imgswiper = () => {
-    const imgs = [a, b, d]; // Image paths
+    const imgs = [a, b, d,e,f,g,h,i,k,l,m,n,o,p,q,r,s,t,u]; // Image paths
     const [idx, setIdx] = useState(0);
 
     useEffect(() => {
@@ -45,20 +45,21 @@ const Imgswiper = () => {
             className="carousel-container"
             style={{
                 display: "flex",
-                justifyContent: "center",
+                marginTop:"150px",
+                marginBottom:"10px",
                 alignItems: "center",
-                height: "50vh",
-                backgroundColor: "#6b9c9e",
-            }}
-        >
+                justifyContent: "center",
+                alignContent: "center",
+                height: "40vh",
+                backgroundColor: "#0077b6",
+            }}>
             <div
                 className="carousel"
                 style={{
-                    overflow: "hidden",
-                    width: "700px", // Increased width
-                    height: "500px", // Increased height
-                    borderRadius: "10px",
-                    boxShadow: "0 4px 10px rgba(0, 0, 0, 0.2)",
+                    width: "900px",
+                    height: "600px",
+                    alignItems: "center",
+                    boxShadow: "1px 1px 20px rgba(47, 47, 47)",
                 }}
             >
                 <div
@@ -66,15 +67,15 @@ const Imgswiper = () => {
                     style={{
                         display: "flex",
                         transition: "transform 0.5s ease-in-out",
-                        transform: `translateX(${-idx * 700}px)`, // Adjust for new width
+                        transform: `translateX(${-idx * 100}%)`,
                     }}
                 >
                     {imgs.map((img, i) => (
                         <div
                             key={i}
                             style={{
-                                minWidth: "700px", // Matches carousel width
-                                height: "500px", // Matches carousel height
+                                minWidth: "900px",
+                                height: "600px",
                                 backgroundImage: `url(${img})`,
                                 backgroundSize: "cover",
                                 backgroundPosition: "center",
